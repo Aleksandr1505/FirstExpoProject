@@ -1,9 +1,8 @@
 import 'react-native-gesture-handler';
-import { NavigationContainer, useFocusEffect, useIsFocused} from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator} from "@react-navigation/stack";
-import { StatusBar } from 'expo-status-bar';
-import React, {useEffect} from 'react';
-import { Image, Platform, StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
+import React, { useEffect } from 'react';
+import { Image, StyleSheet, Text, View, Button } from 'react-native';
 
 
 const Stack = createStackNavigator();
@@ -22,13 +21,12 @@ function HomeScreen({navigation}) {
 
 function FirstPictureScreen ({navigation}) {
     useEffect(() => {
-
         console.log('Test');
-
         return () => {
             console.log('UnMount');
         }
     }, []);
+
     return (
         <View style={styles.container}>
             <Image source={{uri: 'https://images.pexels.com/photos/356968/pexels-photo-356968.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'}} style={styles.pictures}/>
@@ -38,11 +36,8 @@ function FirstPictureScreen ({navigation}) {
 }
 
 function SecondPictureScreen ({navigation}) {
-
     useEffect(() => {
-
         console.log('Test');
-
         return () => {
             console.log('UnMount');
         }
@@ -53,18 +48,17 @@ function SecondPictureScreen ({navigation}) {
             <Image source={{uri: 'https://images.pexels.com/photos/2416602/pexels-photo-2416602.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'}} style={styles.pictures}/>
             <Button title='Go back' onPress={() => navigation.goBack()}/>
         </View>
-    )
+    );
 }
 
 function ThirdPictureScreen ({navigation}) {
     useEffect(() => {
-
         console.log('Test');
-
         return () => {
             console.log('UnMount');
         }
     }, []);
+
     return (
         <View style={styles.container}>
             <Image source={{uri:'https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'}} style={styles.pictures}/>
@@ -75,7 +69,6 @@ function ThirdPictureScreen ({navigation}) {
 
 
 export default function App() {
-
 
     return (
         <NavigationContainer>
