@@ -24,7 +24,6 @@ const PictureScreenContainer = (props, {image}) => {
         }
     }, []);
     return (
-
         <PictureScreenComponent image={image}/>
     )
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { createStackNavigator} from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -10,7 +9,6 @@ import HomeScreenComponent from './screens/HomeScreen'
 import PictureScreenComponent from './screens/PictureScreen';
 
 export default function App() {
-
 
     return (
     <NavigationContainer>
@@ -23,20 +21,6 @@ export default function App() {
     </NavigationContainer>
     );
 }
-
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    pictures: {
-        width: 300,
-        height: 300,
-        marginBottom: 20
-    }
-})
 
 
 
