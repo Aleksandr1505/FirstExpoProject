@@ -4,26 +4,25 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
 
     title: {
         marginBottom: 20,
         textTransform: 'uppercase',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
 
     picture: {
         width: 300,
         height: 300,
-        marginBottom: 20
+        marginBottom: 20,
     },
 
     containerButtons: {
         width: 260,
         flexDirection: 'row',
-        justifyContent: 'space-between'
-
+        justifyContent: 'space-between',
     },
 
     buttons: {
@@ -32,7 +31,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#B7D4FF',
         padding: 16,
-        borderRadius: 5
+        borderRadius: 5,
     },
 
     buttonBack: {
@@ -42,6 +41,6 @@ export const styles = StyleSheet.create({
         backgroundColor: '#B7D4FF',
         padding: 16,
         borderRadius: 5,
-        marginTop: 20
-    }
-})
+        marginTop: 20,
+    },
+});

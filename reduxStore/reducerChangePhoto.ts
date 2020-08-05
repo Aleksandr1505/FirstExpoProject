@@ -4,13 +4,11 @@ const initialState = { picture: 'pictureFirst' };
 
 const changePhoto = (state = initialState, action) => {
     switch (action.type) {
-        case 'CHANGE_PHOTO_ACTION':
-            return Object.assign({}, state, {
-                picture: action.payload,
-            })
+        case CHANGE_PHOTO_ACTION:
+            return { ...state, picture: action.payload };
         default:
-            return state
+            return state;
     }
-}
+};
 
 export { changePhoto };

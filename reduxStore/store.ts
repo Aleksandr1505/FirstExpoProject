@@ -1,7 +1,7 @@
-import { applyMiddleware, compose, createStore } from "redux";
+import { applyMiddleware, compose, createStore } from 'redux';
 import { useDispatch } from 'react-redux';
 import thunk, { ThunkMiddleware } from 'redux-thunk';
-import rootReducer from "./combineReducers";
+import rootReducer from './combineReducers';
 
 const middlewares = () => {
     // @ts-ignore

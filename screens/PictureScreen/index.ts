@@ -1,3 +1,3 @@
-import { PictureScreenContainer } from "./PictureScreenContainer";
+import { PictureScreenContainer } from './PictureScreenContainer';
 
 export default PictureScreenContainer;

@@ -2,10 +2,7 @@ import React from 'react';
 import { HomeScreenComponent } from './HomeScreenComponent';
 
 const HomeScreenContainer = () => {
-
-    return (
-        <HomeScreenComponent />
-    );
+    return <HomeScreenComponent />;
 };
 
 export { HomeScreenContainer };

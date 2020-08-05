@@ -5,7 +5,6 @@ import { styles } from './styles';
 
 const HomeScreenComponent = () => {
     const navigation = useNavigation();
-    var i = 4;
 
     return (
         <View style={styles.container}>
@@ -14,7 +13,7 @@ const HomeScreenComponent = () => {
                 <Text>Pictures</Text>
             </TouchableOpacity>
         </View>
-   );
- }
+    );
+};
 
 export { HomeScreenComponent };
