@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { changePhotoAction } from '../../reduxStore/actionsChangePhoto';
+import { changePhotoAction } from '../../reduxStore/photo/actions';
 import { styles } from './styles';
 
 const PictureScreenComponent = ({ image, dispatch }) => {

@@ -4,15 +4,14 @@ import { PictureScreenComponent } from './PictureScreenComponent';
 import { useThunkDispatch } from '../../reduxStore/store';
 
 const PictureScreenContainer = () => {
-    const picture = useSelector((state) => state);
+    const { picture } = useSelector((state) => state.changePhotoReducer);
+
     const dispatch = useThunkDispatch();
     const images = {
         pictureFirst: require('../../assets/architectureBlueBuildings.jpg'),
         pictureSecond: require('../../assets/personWearing.jpg'),
-        pictureThird: require('../../assets/womanPlatformCity.jpg')
-    }
-
-    const image = picture.changePhoto.picture;
+        pictureThird: require('../../assets/womanPlatformCity.jpg'),
+    };
 
     useEffect(() => {
         console.log('Test');
@@ -20,7 +19,7 @@ const PictureScreenContainer = () => {
             console.log('UnMount');
         };
     }, []);
-    return <PictureScreenComponent image={images[image]} dispatch={dispatch} />;
+    return <PictureScreenComponent image={images[picture]} dispatch={dispatch} />;
 };
 
 export { PictureScreenContainer };

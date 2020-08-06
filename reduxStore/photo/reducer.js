@@ -1,14 +1,14 @@
-import { CHANGE_PHOTO_ACTION } from './actionsChangePhoto';
+import { CHANGE_PHOTO } from './actionTypes';
 
 const initialState = { picture: 'pictureFirst' };
 
-const changePhoto = (state = initialState, action) => {
+const changePhotoReducer = (state = initialState, action) => {
     switch (action.type) {
-        case CHANGE_PHOTO_ACTION:
+        case CHANGE_PHOTO:
             return { ...state, picture: action.payload };
         default:
             return state;
     }
 };
 
-export { changePhoto };
+export { changePhotoReducer };
