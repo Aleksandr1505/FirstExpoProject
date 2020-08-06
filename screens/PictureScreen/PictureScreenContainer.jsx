@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { PictureScreenComponent } from './PictureScreenComponent';
 import { useThunkDispatch } from '../../reduxStore/store';
+import { changePhotoAction } from '../../reduxStore/photo/actions';
 
 const PictureScreenContainer = () => {
     const { picture } = useSelector((state) => state.changePhotoReducer);
 
-    const dispatch = useThunkDispatch();
+    const action = changePhotoAction();
     const images = {
         pictureFirst: require('../../assets/architectureBlueBuildings.jpg'),
         pictureSecond: require('../../assets/personWearing.jpg'),
@@ -14,12 +15,9 @@ const PictureScreenContainer = () => {
     };
 
     useEffect(() => {
-        console.log('Test');
-        return () => {
-            console.log('UnMount');
-        };
+        return () => {};
     }, []);
-    return <PictureScreenComponent image={images[picture]} dispatch={dispatch} />;
+    return <PictureScreenComponent image={images[picture]} dispatch={action} />;
 };
 
 export { PictureScreenContainer };
