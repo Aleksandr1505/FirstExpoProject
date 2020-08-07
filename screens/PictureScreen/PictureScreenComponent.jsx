@@ -3,7 +3,7 @@ import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from './styles';
 
-const PictureScreenComponent = ({ image, dispatch }) => {
+const PictureScreenComponent = ({ image, anotherPhoto }) => {
     const navigation = useNavigation();
 
     return (
@@ -11,13 +11,13 @@ const PictureScreenComponent = ({ image, dispatch }) => {
             <Text style={styles.title}>Press one of three buttons to see picture</Text>
             <Image source={image} style={styles.picture} />
             <View style={styles.containerButtons}>
-                <TouchableOpacity style={styles.buttons} onPress={() => dispatch('pictureFirst')}>
+                <TouchableOpacity style={styles.buttons} onPress={() => anotherPhoto('pictureFirst')}>
                     <Text>1</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttons} onPress={() => dispatch('pictureSecond')}>
+                <TouchableOpacity style={styles.buttons} onPress={() => anotherPhoto('pictureSecond')}>
                     <Text>2</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttons} onPress={() => dispatch('pictureThird')}>
+                <TouchableOpacity style={styles.buttons} onPress={() => anotherPhoto('pictureThird')}>
                     <Text>3</Text>
                 </TouchableOpacity>
             </View>
